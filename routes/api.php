@@ -60,6 +60,13 @@ Route::prefix('v1')->group(function(){ //Version 1 of my Rest API
 			Route::put('{id}', 'API\v1\Position\UpdatePositionController');
 		});
 
+		Route::prefix('area')->group(function(){
+			Route::post('', 'API\v1\Area\AddAreaController');
+			Route::get('', 'API\v1\Area\GetAreaController');
+			Route::delete('{id}', 'API\v1\Area\DeleteAreaController');
+			Route::put('{id}', 'API\v1\Area\UpdateAreaController');
+		});
+
 		Route::prefix('partylist')->group(function(){
 			Route::post('', 'API\v1\Partylist\AddController');
 			Route::get('',	'API\v1\Partylist\GetController');

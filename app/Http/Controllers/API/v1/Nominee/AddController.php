@@ -36,7 +36,6 @@ class AddController extends Controller
                     $query->where('election_id', Util::getCurrentElection());
                 })
             ],
-    		'course' => 'required',
     		'position_id' => 'required|exists:position,id',
     		'partylist_id' => 'nullable|exists:partylist,id',
     		'image' => 'nullable|image'

@@ -35,7 +35,6 @@ class UpdateController extends Controller
                     $query->where('election_id', Util::getCurrentElection());
                 })
             ],
-    		'course' => 'required',
     		'position_id' => 'required|exists:nominee,position_id',
     		'partylist_id' => 'nullable|exists:nominee,partylist_id'
     	]);
@@ -49,7 +48,6 @@ class UpdateController extends Controller
     	$new['image'] = Util::getImagePath($request, config('app.nominee_directory'), $default_image);
     	
     	$nominee->name = $request->name;
-    	$nominee->course = $request->course;
     	$nominee->student_id = $request->student_id;
     	$nominee->position_id = $request->position_id;
     	$nominee->partylist_id = $request->partylist_id;

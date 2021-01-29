@@ -34,8 +34,7 @@ class UpdateController extends Controller
                 Rule::unique('voter')->ignore($id)->where(function($query){
                     $query->where('election_id', Util::getCurrentElection());
                 })
-            ],
-    		'course' => 'required'
+            ]
     	]);
     }
 

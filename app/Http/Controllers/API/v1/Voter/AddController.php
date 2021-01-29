@@ -41,8 +41,7 @@ class AddController extends Controller
                 Rule::unique('voter')->where(function($query){
                     $query->where('election_id', Util::getCurrentElection());
                 })
-            ],
-    		'course' => 'required'
+            ]
     	]);
     }
 }

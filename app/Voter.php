@@ -10,5 +10,5 @@ class Voter extends Authenticatable
 	use HasApiTokens;
 
     protected $table = 'voter';
-    protected $fillable = ['name', 'student_id', 'course', 'election_id'];
+    protected $fillable = ['name', 'student_id', 'course', 'election_id', 'area_id'];
 }
